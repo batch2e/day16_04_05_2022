@@ -1,0 +1,187 @@
+
+https://howtodoinjava.com/java/regex/start-end-of-string/
+
+public class RegularExpressionDemo1 {
+public static void main(String args[])
+{
+	Scanner scan=new Scanner(System.in);
+	String str=scan.next();
+	String pattern="^(DSK|LTP|IPH)-\\d{6}[hHlL]$";
+	if(str.matches(pattern))
+	{
+		System.out.println("Valid");
+	}
+	else
+	{
+		System.out.println("Invalid");
+	}
+}
+}
+
+-------------------------------------------------------------------------------------------------
+
+
+
+
+
+
+ public class RegularExpressionDemo2 {
+
+	 // We are looking for a single character which contains alphabet
+    public static void main(String[] args) {
+ 
+     String pattern1="^[a-z0-9A-Z]+$";// ^ we are looking for a pattern at the begining $pattern at the end
+                               // The significance of using both means we are looking for a pattern 
+                               // which represents a single word
+                              // [abc] the characters within the [] signifies either of the character
+     String str1a="Dd12";        // either a or b or c
+                                    // + one of more characters
+     if(str1a.matches(pattern1)){
+      System.out.println("Matched");
+     }
+     else{
+     System.out.println("Not matched");
+     }
+   }
+ }
+--------------------------------------------------------------------------------------------------------------------------------------
+public class RegularExpressionDemo3 {
+
+	 // We are looking for a single character which contains alphabet
+    public static void main(String[] args) {
+ 
+     String pattern1="^c.t$"; // , can be replaced by any other character
+     String str1a="caat";       
+                                    
+     if(str1a.matches(pattern1)){
+      System.out.println("Matched");
+     }
+     else{
+     System.out.println("Not matched");
+     }
+   }
+ }
+-------------------------------------------------------------------------------------------------------------------------
+public class RegularExpressionDemo4 {
+
+	 // We are looking for a single character which contains alphabet
+    public static void main(String[] args) {
+ 
+     String pattern1="^(manager)|(asstmgr)|(typist)$"; // , can be replaced by any other character
+     String str1a="manager";       
+                                    
+     if(str1a.matches(pattern1)){
+      System.out.println("Matched");
+     }
+     else{
+     System.out.println("Not matched");
+     }
+   }
+ }
+-------------------------------------------------------------------------------------------
+public class RegularExpressionDemo5 {
+
+	 // We are looking for a single character which contains alphabet
+    public static void main(String[] args) {
+ 
+     String pattern1="^[^a-zA-Z]+$"; // , can be replaced by any other character
+     String str1a="manager";       
+                                    
+     if(str1a.matches(pattern1)){
+      System.out.println("Matched");
+     }
+     else{
+     System.out.println("Not matched");
+     }
+   }
+ }
+----------------------------------------------------------
+
+public class RegularExpressionDemo6 {
+
+	 // We are looking for a single character which contains alphabet
+    public static void main(String[] args) {
+ 
+     //String pattern1="^[a-zA-Z0-9]?$"; 
+    	String pattern1="^[a-zA-Z35]?$"; 
+     String str1a="5";       
+                                    
+     if(str1a.matches(pattern1)){
+      System.out.println("Matched");
+     }
+     else{
+     System.out.println("Not matched");
+     }
+   }
+ }
+------------------------------------------------------------------------------------
+public class RegularExpressionDemo7 {
+
+	 // We are looking for alphabets minimum 2 and maximum 6
+    public static void main(String[] args) {
+ 
+     String pattern1="^[a-zA-Z]{2,6}$"; 
+     String pattern2="^[a-zA-Z]{6}$"; // exactly 6 characters which are either in smallcase or in uppercase
+    	
+     String str1a="a";       
+                                    
+     if(str1a.matches(pattern1)){
+      System.out.println("Matched");
+     }
+     else{
+     System.out.println("Not matched");
+     }
+   }
+ }
+------------------------------------------------
+public class RegularExpressionDemo8{
+
+	
+    public static void main(String[] args) {
+ 
+     String pattern1="^\\w+$";
+     String str1a="Dd_$12";      
+                                    
+     if(str1a.matches(pattern1)){
+      System.out.println("Matched");
+     }
+     else{
+     System.out.println("Not matched");
+     }
+   }
+ }
+[Not matched because of $]
+public class RegularExpressionDemo9{
+
+	
+    public static void main(String[] args) {
+ 
+     String pattern1="^\\W+$";
+     String str1a="#$@";      
+                                    
+     if(str1a.matches(pattern1)){
+      System.out.println("Matched");
+     }
+     else{
+     System.out.println("Not matched");
+     }
+   }
+ }
+-----------------------------------------------------------------
+public class RegularExpressionDemo10{
+
+	
+    public static void main(String[] args) {
+ 
+     String pattern1="^\\d{10}$";
+     String str1a="98303943342";      
+                                    
+     if(str1a.matches(pattern1)){
+      System.out.println("Matched");
+     }
+     else{
+     System.out.println("Not matched");
+     }
+   }
+}
+------------------------
